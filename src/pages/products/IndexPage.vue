@@ -6,7 +6,7 @@
             <q-btn
                 icon="add"
                 color="secondary"
-                label="Nuevo Producto"
+                label="Agregar un producto"  
             />
         </div>
 
@@ -16,17 +16,29 @@
             :columns="columns"
             row-key="name"
             flat bordered
-        /> 
+        >
+            <template v-slot:body-cell-actions="props">
+                <q-td :props="props">
+                    <q-btn color="primary" icon="fa-solid fa-eye" dense class="q-pa-sm" @click="router.push({ path: `/product/${props.row.id}` })" />
+                </q-td>
+            </template>
+        </q-table>
+
     </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const products = ref([]);
 
+
 const columns = [
 
+  { name: 'actions', label: 'Acciones', field: 'actions' },
   { name: 'id', label: 'Id', field: 'id' },
   { name: 'title', label: 'Nombre', field: 'title' },
   { name: 'price', label: 'Precio', field: 'price' },
