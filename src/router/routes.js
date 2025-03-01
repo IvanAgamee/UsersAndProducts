@@ -6,11 +6,12 @@ const routes = [
       { path: '', component: () => import('pages/IndexPage.vue') },
 
       // Rutas de productos
-      { path: 'products', component: () => import('pages/products/IndexPage.vue') }, // Table de usuarios
-      { path: 'product/:id', component: () => import('src/pages/products/ProductDetail.vue') }, // Detalle de UN usuario
+      { path: 'products', component: () => import('pages/products/IndexPage.vue'), name: 'productsTable' }, // Listado de productos
+      { path: 'product/:id', component: () => import('src/pages/products/ProductDetail.vue'), name: 'productDetail' }, // Detalle de UN producto
+      { path: 'product/create', component: () => import('src/pages/products/AddProduct.vue'), name: 'addProduct' }, // Agregar un producto
 
       // Rutas de usuarios
-      { path: 'users', component: () => import('pages/users/indexPage.vue') },
+      { path: 'users', component: () => import('src/pages/users/IndexPage.vue') },
       { path: 'user/:id', component: () => import('src/pages/users/UserDetail.vue') }, // Detalle de UN usuario
     ]
   },

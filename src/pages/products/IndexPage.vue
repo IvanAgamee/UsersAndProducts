@@ -6,7 +6,8 @@
             <q-btn
                 icon="add"
                 color="secondary"
-                label="Agregar un producto"  
+                label="Agregar un producto" 
+                @click="router.push({ name: 'addProduct' })"
             />
         </div>
 
@@ -19,7 +20,8 @@
         >
             <template v-slot:body-cell-actions="props">
                 <q-td :props="props">
-                    <q-btn color="primary" icon="fa-solid fa-eye" dense class="q-pa-sm" @click="router.push({ path: `/product/${props.row.id}` })" />
+                    <q-btn color="primary" icon="fa-solid fa-eye" dense class="q-pa-sm" @click="router.push({ name: 'productDetail', params: { id: props.row.id } })" />
+                    <!-- <q-btn color="primary" icon="fa-solid fa-eye" dense class="q-pa-sm" @click="router.push({ path: `/products/${props.row.id}` })" /> -->
                 </q-td>
             </template>
         </q-table>
