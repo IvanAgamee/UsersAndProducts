@@ -10,8 +10,8 @@ const routes = [
       { path: 'product/:id', component: () => import('src/pages/products/ProductDetail.vue') }, // Detalle de UN usuario
 
       // Rutas de usuarios
-      { path: 'user', component: () => import('pages/user-Vistas/indexPage.vue') },
-
+      { path: 'users', component: () => import('pages/users/indexPage.vue') },
+      { path: 'user/:id', component: () => import('src/pages/users/UserDetail.vue') }, // Detalle de UN usuario
     ]
   },
 

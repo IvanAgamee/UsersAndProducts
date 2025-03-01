@@ -2,7 +2,44 @@
     <div>
         <h5>Esta es mi pagina de el detalle de un producto</h5>
 
-        <div>{{ productDetail }}</div>
+       <!-- <div>{{ productDetail }}</div> -->
+
+        <div class="col-6">
+        <q-img v-if="productDetail?.images?.[0]"
+          :src="productDetail?.images?.[0]"
+          alt="Imagen de Producto"
+          width="150px"
+          height="150px">
+        </q-img>
+        <q-img v-if="productDetail.images?.[1]"
+          :src="productDetail.images?.[1]"
+          alt="Imagen de Producto"
+          width="150px"
+          height="150px">
+        </q-img>
+        <q-img v-if="productDetail?.images?.[2]"
+          :src="productDetail?.images?.[2]"
+          alt="Imagen de Producto"
+          width="150px"
+          height="150px">
+        </q-img>
+
+      </div>
+
+
+      <div class="q-pa-md example-column-row-width">
+      <div class="column" style="height: 150px">
+        <div class="col">
+          <label>Nombre: </label>{{ productDetail.title }}
+        </div>
+        <div class="col">
+          <label>Precio: </label>{{ productDetail.price }}
+        </div>
+        <div class="col">
+          <label>Descripcion: </label>{{ productDetail.description }}
+        </div>
+      </div>
+</div>
     </div>
 </template>
 
