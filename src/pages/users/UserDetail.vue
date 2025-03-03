@@ -1,4 +1,14 @@
 <template>
+
+    <div class="q-pa-md text-left">
+          <q-btn
+            icon="fa-solid fa-left-long"
+            color="secondary"
+            label="Volver"
+            @click="$router.push({ name: 'usersTable' })"
+          />
+    </div>
+
   <div>
       <h5>USUARIO</h5>
 

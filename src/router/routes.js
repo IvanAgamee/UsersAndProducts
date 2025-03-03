@@ -11,8 +11,9 @@ const routes = [
       { path: 'product/create', component: () => import('src/pages/products/AddProduct.vue'), name: 'addProduct' }, // Agregar un producto
 
       // Rutas de usuarios
-      { path: 'users', component: () => import('src/pages/users/IndexPage.vue') },
-      { path: 'user/:id', component: () => import('src/pages/users/UserDetail.vue') }, // Detalle de UN usuario
+      { path: 'users', component: () => import('src/pages/users/indexPage.vue'), name: 'usersTable'  },
+      { path: 'user/:id', component: () => import('src/pages/users/UserDetail.vue'), name: 'userDetail'  }, // Detalle de UN usuario
+      { path: 'user/create', component: () => import('src/pages/users/AddUser.vue'), name: 'addUser' },
     ]
   },
 

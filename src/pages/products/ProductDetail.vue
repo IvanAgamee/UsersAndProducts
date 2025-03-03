@@ -1,4 +1,14 @@
 <template>
+
+        <div class="q-pa-md text-left">
+          <q-btn
+            icon="fa-solid fa-left-long"
+            color="secondary"
+            label="Volver"
+            @click="$router.push({ name: 'productsTable' })"
+          />
+        </div>
+
     <div>
         <h5>Esta es mi pagina de el detalle de un producto</h5>
 
@@ -23,7 +33,6 @@
           width="150px"
           height="150px">
         </q-img>
-
       </div>
 
 

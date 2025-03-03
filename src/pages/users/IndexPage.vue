@@ -1,4 +1,5 @@
 <template>
+
   <div>
       <h5>Usuarios</h5>
 
@@ -7,6 +8,7 @@
               icon="add"
               color="secondary"
               label="Nuevo usuario"
+              @click="router.push({ name: 'addUser' })"
           />
       </div>
 
