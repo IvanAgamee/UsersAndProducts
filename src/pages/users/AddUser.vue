@@ -4,7 +4,7 @@
 
       <q-input v-model="user.name"  type="text" label="Nombre del Usuario" />
 
-      <q-input v-model="user.email"  type="number" label="Correo" />
+      <q-input v-model="user.email"  type="text" label="Correo" />
 
       <q-input
         v-model="user.password"
@@ -24,7 +24,7 @@
     </q-input>
 
 
-      <q-btn label="Guardar" color="primary" @click="createProduct" />
+      <q-btn label="Guardar" color="primary" @click="createUser" />
 
   </div>
 </template>
